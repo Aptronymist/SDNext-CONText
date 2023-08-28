@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Created by Aptronym on Discord, only intended for SDNext use -->
+<root>
+  <shell>
+
+    <menu name="SDNext">
+      
+      <menu name="SDNext VENV Console">
+        <actions>
+          <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; venv\\scripts\\activate.bat" />
+        </actions>
+      </menu>
+
+      <menu name="Start SD.Next (Custom w/args)">
+        <actions>
+          <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; webui.bat %SDNEXT_ARGS%" />
+        </actions>  
+      </menu>
+
+      <menu name="Alt Startups">
+      
+        <menu name="Quick">
+          <actions>
+            <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; webui.bat --quick %SDNEXT_ARGS%" />
+          </actions>
+        </menu>
+
+        <menu name="Plain">
+          <actions>
+            <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; webui.bat" />  
+          </actions>
+        </menu>
+
+        <menu name="Upgrade">
+          <actions>
+            <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; webui.bat --upgrade %SDNEXT_ARGS%" />
+          </actions>
+        </menu>
+
+        <menu name="Backend">
+        
+          <menu name="Original">
+            <actions>
+              <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; webui.bat --backend original %SDNEXT_ARGS%" />
+            </actions>
+          </menu>
+        
+          <menu name="Diffusers">
+            <actions>
+              <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; webui.bat --backend diffusers %SDNEXT_ARGS%" />
+            </actions>
+          </menu>
+        
+        </menu>
+
+        <menu name="Devices">
+        
+          <menu name="DirectML">
+            <actions>
+              <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; webui.bat --use-directml %SDNEXT_ARGS%" />
+            </actions>
+          </menu>
+        
+          <menu name="CUDA">
+            <actions>
+              <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; webui.bat --use-cuda %SDNEXT_ARGS%" />
+            </actions>
+          </menu>
+        
+          <menu name="CPU Only">
+            <actions>
+              <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; webui.bat --use-cpu all" />
+            </actions>
+          </menu>
+        
+        </menu>
+
+        <menu name="Sharing">
+        
+          <menu name="Share (Secure)">
+            <actions>
+              <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; webui.bat --share %SDNEXT_ARGS%" />
+            </actions>
+          </menu>
+        
+          <menu name="Share (Insecure)">
+            <actions>
+              <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; webui.bat --share --insecure %SDNEXT_ARGS%" />
+            </actions>
+          </menu>
+        
+          <menu name="LAN Share (Secure)">
+            <actions>
+              <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; webui.bat --listen %SDNEXT_ARGS%" />
+            </actions>
+          </menu>
+        
+          <menu name="LAN Share (Insecure)">
+            <actions>
+              <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; webui.bat --listen --insecure %SDNEXT_ARGS%" />
+            </actions>
+          </menu>
+        
+          <menu name="API Only Mode">
+            <actions>
+              <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; webui.bat --api-only %SDNEXT_ARGS%" />
+            </actions>
+          </menu>
+        
+          <menu name="API Only Mode (Docs+Log)">
+            <actions>
+              <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; webui.bat --docs --api-only --api-log %SDNEXT_ARGS%" />
+            </actions>
+          </menu>
+        
+        </menu>
+
+      </menu>
+
+      <menu name="Information">
+      
+        <menu name="Repo">
+          <actions>
+            <open path="https://github.com/vladmandic/automatic" />
+          </actions>
+        </menu>
+      
+        <menu name="Wiki">
+          
+          <menu name="Installation">
+            <actions>
+              <open path="https://github.com/vladmandic/automatic/wiki/Installation" />
+            </actions>
+          </menu>
+
+          <menu name="Advanced Installation">
+            <actions>
+              <open path="https://github.com/vladmandic/automatic/wiki/Advanced-Installation" />
+            </actions>
+          </menu>
+
+          <menu name="SD-XL Setup/Use">
+            <actions>
+              <open path="https://github.com/vladmandic/automatic/wiki/SD-XL" />
+            </actions>  
+          </menu>
+		  <menu name="Troubleshooting">
+            <actions>
+              <open path="https://github.com/vladmandic/automatic/wiki/Troubleshooting" />
+            </actions>
+          </menu>
+        </menu>
+      
+        <menu name="Issues">
+          <actions>
+            <open path="https://github.com/vladmandic/automatic/issues" />
+          </actions>
+        </menu>
+      
+        <menu name="Discord">
+          <actions>
+            <open path="https://discord.gg/VjvR2tabEX" />
+          </actions>
+        </menu>
+
+      </menu>
+
+      <menu name="Troubleshooting">
+      
+        <menu name="Copy Log to Clipboard">
+          <actions>
+            <exec path="cmd.exe" arguments="/C type &quot;%SDNEXT%\\sdnext.log&quot; | clip" />
+          </actions>
+        </menu>
+      
+        <menu name="Test Run (No Start)">
+          <actions>
+            <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; webui.bat --test --debug %SDNEXT_ARGS%" />
+          </actions>  
+        </menu>
+      
+        <menu name="Troubleshooting Startup">
+          <actions>
+            <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; webui.bat --debug --experimental --ignore --safe %SDNEXT_ARGS%" />
+          </actions>
+        </menu>
+      
+        <menu name="Reset SD.Next (Internal)">
+          <actions>
+            <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; webui.bat --reset --debug %SDNEXT_ARGS%" />
+          </actions>
+        </menu>
+      
+        <menu name="Reinstall SD.Next (Internal)">
+          <actions>
+            <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; webui.bat --reinstall --debug %SDNEXT_ARGS%" />
+          </actions>
+        </menu>
+      
+        <menu name="Reinstall Requirements (PIP)">
+          <actions>
+            <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; venv\\scripts\\activate.bat &amp;&amp; pip install -r requirements.txt" />
+          </actions>
+        </menu>
+      
+        <menu name="Reinstall Requirements (PIP - Forced)">
+          <actions>
+            <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; venv\\scripts\\activate.bat &amp;&amp; pip install --force-reinstall -r requirements.txt" />
+          </actions>
+        </menu>
+      
+        <menu name="VENV Wipe+Reinstall">
+          <actions>
+            <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; python -m venv --clear venv &amp;&amp; venv\\scripts\\activate.bat &amp;&amp; pip install -r requirements.txt" />
+          </actions>
+        </menu>
+
+      </menu>
+
+      <menu name="Utility">
+      
+        <menu name="Backup Configs">
+          <actions>
+            <exec path="cmd.exe" arguments="/k pushd &quot;%SDNEXT%&quot; &amp;&amp; copy /y /v ui-config.json ui-config.json.backup &amp;&amp; copy /y /v config.json config.json.backup" />
+          </actions>
+        </menu>
+      
+        <menu name="Restore Configs">
+          <actions>
+            <exec path="cmd.exe" arguments="/C pushd &quot;%SDNEXT%&quot; &amp;&amp; copy /y /v ui-config.json.backup ui-config.json &amp;&amp; copy /y /v config.json.bakup config.json" />
+          </actions>
+        </menu>
+      
+        <menu name="Clean Configs (Rename)">
+          <actions>
+            <exec path="cmd.exe" arguments="/C pushd &quot;%SDNEXT%&quot; &amp;&amp; ren ui-config.json ui-config.json.backup &amp;&amp; ren config.json config.json.backup" />
+          </actions>
+        </menu>
+      
+        <menu name="Clean Configs (Delete)">
+          <actions>
+            <exec path="cmd.exe" arguments="/C pushd &quot;%SDNEXT%&quot; &amp;&amp; del /Q ui-config.json &amp;&amp; del /Q config.json" />
+          </actions>
+        </menu>
+      
+        <menu name="Branches">
+        
+          <menu name="Switch to Master">
+            <actions>
+              <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; git checkout -q master" />
+            </actions>
+          </menu>
+        
+          <menu name="Switch to Dev">
+            <actions>
+              <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; git checkout -q dev" />
+            </actions>
+          </menu>
+        
+        </menu>
+
+      </menu>
+
+      <menu name="Save &amp;&amp; Restore">
+      
+        <menu name="Save (Don't Use)">
+        
+          <menu name="Save 1">
+            <actions>
+              <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; git checkout -q -B SAVE1" />
+            </actions>
+          </menu>
+        
+          <menu name="Save 2">
+            <actions>
+              <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; git checkout -q -B SAVE2" />
+            </actions>
+          </menu>
+        
+        </menu>
+      
+        <menu name="Restore (Don't Use)">
+        
+          <menu name="Restore Previous">
+            <actions>
+              <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; git reset -q --hard HEAD^" />
+            </actions>
+          </menu>
+        
+          <menu name="Restore 1">
+            <actions>
+              <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; git -q checkout SAVE1" />
+            </actions>
+          </menu>
+        
+          <menu name="Restore 2">
+            <actions>
+              <exec path="cmd.exe" arguments="/K pushd &quot;%SDNEXT%&quot; &amp;&amp; git -q checkout SAVE2" />
+            </actions>
+          </menu>
+        
+        </menu>
+
+      </menu>
+
+      <menu name="Install">
+      
+        <menu name="Clone SDNext Here">
+          <actions>
+            <exec path="cmd.exe" arguments="/K pushd ${selection.dir} &amp;&amp; git clone https://github.com/vladmandic/automatic ." />
+          </actions>
+        </menu>
+      
+        <menu name="Install &amp; Run Here">
+          <actions>
+            <exec path="cmd.exe" arguments="/K pushd ${selection.dir} &amp;&amp; git clone https://github.com/vladmandic/automatic . &amp;&amp; webui.bat %SDNEXT_ARGS%" />
+          </actions>
+        </menu>
+      
+        <menu name="Set SDNext Home Dir">
+          <actions>
+            <exec path="cmd.exe" arguments="/C setx SDNEXT ${selection.dir}" />
+          </actions>
+        </menu>
+      
+        <menu name="Set SDNext Startup Defaults">
+          <actions>
+            <prompt name="sdstartup-set" title="Enter desired startup options:" />
+            <exec path="cmd.exe" arguments="/K setx SDNEXT_ARGS ${sdstartup-set}" />
+          </actions>
+        </menu>
+      
+      </menu>
+
+    </menu>
+
+  </shell>  
+</root>
