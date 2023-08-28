@@ -1,7 +1,9 @@
 # SDNext-CONText
+
 A set of *beta* context menus for use with [SDNext](https://github.com/vladmandic/automatic) that allows for easy starting in various modes, troubleshooting, and maintenance.  
 Additional features to come.
 Requires [ShellAnything](https://github.com/end2endzone/ShellAnything) to be installed and registered.
+
 ## Installation & Use
 
 1. Place the xml file in your C:\user\username\shellanything folder.
