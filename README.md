@@ -1,2 +1,3 @@
 # SDNext-CONText
-A set of context menus for use with (SD:Next)[https:\\github.com\vladmandic\automatic] that allows for easy starting, troubleshooting, and maintenance.
+A set of *beta* context menus for use with [SDNext](https:\\github.com\vladmandic\automatic) that allows for easy starting in various modes, troubleshooting, and maintenance.  
+Additional features to come.
