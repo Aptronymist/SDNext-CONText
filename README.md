@@ -2,7 +2,7 @@
 
 A set of *beta* context menus for use with [SDNext](https://github.com/vladmandic/automatic) that allows for easy starting in various modes, troubleshooting, and maintenance.  
 Additional features to come.
-Requires [ShellAnything](https://github.com/end2endzone/ShellAnything) to be installed and registered.
+Requires [ShellAnything](https://github.com/end2endzone/ShellAnything) to be installed and registered first.
 
 ## Installation & Use
 
